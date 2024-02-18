@@ -1,0 +1,89 @@
+1. variable name can not start with numbers.
+2. there can not be space or spaces within variable name, use underscore(_)
+3. we can not use symboles in variable name.
+4. avoid using special words like -- list , str, int , def etc for variable name.
+5. it is considered best practice to use lowercase letters for variable name.
+
+
+
+a = 20
+b = 50
+print(id(a))        # -- checking variable's memory address using id function
+print(id(b))        # -- checking variable's memory address using id function
+
+# scope of variable - 
+
+1)global variable -- variable which are declared outside of the function can be used 
+anywhere in the program.
+
+2)local variable -- variable which are declared within any function can be used within
+any function only.
+
+
+# example -- 1
+a = 50
+def call_me():
+    a = 60
+call_me()
+print(a) # output -- 50
+
+
+# example -- 2
+
+a = 50
+def call_me():
+    b = 10
+    print(a+b)
+call_me()           # output - 60
+
+
+# example - 3
+
+def call_me():
+    b = 10
+call_me()
+print(b) # output -- b is not defined.
+
+
+# example -- 4
+
+name = 'This is a global name'
+def greet():
+    name = 'sammy'
+    def hello():
+        print('hello '+name)
+    hello()
+greet()
+print(name)
+
+
+# example - 4
+
+x = 50
+def func(x):
+    print('x is ',x)
+    x =2
+    print('changed local x to ',x)
+    
+func(x)
+print('x is still ',x)
+
+
+
+### global statement --
+
+it is impossible to assign a value to a variable defined outside a 
+function without using 'global' statement.
+
+
+x = 50
+def func():
+    global x
+    print('This func() is now using global x!')
+    print('Because of global x is :',x)
+    x =2
+    print('Ran func() changed global x to ',x)
+
+print('Befor calling func(), x is :',x)
+func()
+print('value of x outside of func() is :', x)

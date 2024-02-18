@@ -1,0 +1,19 @@
+Q - What is module ??
+Answer - module refers to a file containing python statements and definitions. We can define our
+most used functions in a module and import it, istead of coping their definitions into different
+programs.
+Note -- dir() gives all the name of functions defined in the module.
+Example -- 
+import main
+print(dir(main))
+
+
+Q - What is package??
+Answer - Packages are way of structuring Python's modules.
+(Package - grouping modules into packages)
+
+Note - a directory must contain a file named __init__.py in order for python to consider it as a package.
+This file can be left empty but we generally place the initialization code for that package in this file.
+
+Note -- importing module from package -- import Game.Image.open
+Game -- Package, Image -- Sub-Package, Open -- module

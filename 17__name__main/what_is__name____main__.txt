@@ -1,0 +1,5 @@
+In Python, the __name__ variable is a special built-in variable that is used to 
+determine if a Python script is being run as the main program or if it is being 
+imported as a module into another script. The value of __name__ is set to "__main__" 
+when the script is executed directly, and it is set to the name of the module 
+(i.e., the filename without the extension) when the script is imported as a module.
